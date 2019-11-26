@@ -45,3 +45,6 @@ console.log(camelCase(null));
 console.log(camelCase({}));
 
 //snake_case
+// function snake_case(str) {
+
+// }
