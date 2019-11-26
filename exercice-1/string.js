@@ -24,8 +24,15 @@ function camelCase(str) {
 //snake_case
 function snake_case(str) {
     if(typeof str !== "string" || !str ) return '';
-    return str.split(" ").join("_").toLowerCase();
+    return str.replace(/ /g, '_').toLowerCase();
+    //return str.split(" ").join("_").toLowerCase();
 }
+
+
+//leet
+// function leet(str) {
+
+// }
 
 console.log(snake_case(""));
 console.log(snake_case("Test"));
