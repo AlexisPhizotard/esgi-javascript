@@ -36,8 +36,6 @@ function leet(str) {
     return str.replace(/[aA]/g,"4").replace(/[eE]/g,"3").replace(/[iI]/g,"1").replace(/[oO]/g,"0").replace(/[uU]/g,"(_)").replace(/[yY]/g,"7");
 }
 
-function prop_access(str) {
 
-}
 
 console.log(leet("anaconda"));
