@@ -17,8 +17,19 @@ function capitalize(str) {
 
 //camelCase
 function camelCase(str) {
-    return capitalize(str).split(" ").join("");
+    if(typeof str !== "string" || !str ) return '';
+    return str.toLowerCase().split(/[^a-zA-Z0-9]+(.)/g).map(function(item){
+        return ucfirst(item);
+    }).join("");
 }
+
+console.log(camelCase("a"));
+console.log(camelCase("Test"));
+console.log(camelCase("  test"));
+console.log(camelCase("test Test_tst"));
+console.log(camelCase(""));
+console.log(camelCase(null));
+console.log(camelCase({}));
 
 
 //snake_case
@@ -44,10 +55,10 @@ function snake_case(str) {
 // U => (_)
 // Y => 7
 
-console.log(leet("a"));
-console.log(leet("Test"));
-console.log(leet("  test"));
-console.log(leet("test Test tst"));
-console.log(leet(""));
-console.log(leet(null));
-console.log(leet({}));
+// console.log(leet("a"));
+// console.log(leet("Test"));
+// console.log(leet("  test"));
+// console.log(leet("test Test tst"));
+// console.log(leet(""));
+// console.log(leet(null));
+// console.log(leet({}));
