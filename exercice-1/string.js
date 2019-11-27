@@ -31,11 +31,12 @@ function snake_case(str) {
 }
 
 //leet
-// function leet(str) {
-//     if(typeof str !== "string" || !str ) return '';
-//     // let chrs = {'a':'4','e':'3','i':'1','y':'7','u':'(_)','o':'0'};
-//     // return str.replace(/[aeiouy]/g);
-// }
+function leet(str) {
+    if(typeof str !== "string" || !str ) return '';
+    return str;
+    // let chrs = {'a':'4','e':'3','i':'1','y':'7','u':'(_)','o':'0'};
+    // return str.replace(/[aeiouy]/g);
+}
 
 
 // A => 4
@@ -45,4 +46,4 @@ function snake_case(str) {
 // U => (_)
 // Y => 7
 
-console.log(leet("test Test tst"));
+//console.log(leet("test Test tst"));
