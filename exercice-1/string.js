@@ -18,34 +18,24 @@ function capitalize(str) {
 //camelCase
 function camelCase(str) {
     if(typeof str !== "string" || !str ) return '';
-    return str.toLowerCase().split(/[^a-zA-Z0-9]+(.)/g).map(function(item){
+    return str.toLowerCase().split(/[^a-zA-Z0-9]/g).map(function(item){
         return ucfirst(item);
     }).join("");
 }
 
-console.log(camelCase("a"));
-console.log(camelCase("Test"));
-console.log(camelCase("  test"));
-console.log(camelCase("test Test_tst"));
-console.log(camelCase(""));
-console.log(camelCase(null));
-console.log(camelCase({}));
-
-
 //snake_case
 function snake_case(str) {
     if(typeof str !== "string" || !str ) return '';
-    return str.replace(/ /g, '_').toLowerCase();
+    return str.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();
     //return str.split(" ").join("_").toLowerCase();
 }
-
 
 //leet
 // function leet(str) {
 //     if(typeof str !== "string" || !str ) return '';
 //     // let chrs = {'a':'4','e':'3','i':'1','y':'7','u':'(_)','o':'0'};
 //     // return str.replace(/[aeiouy]/g);
-//     }
+// }
 
 
 // A => 4
@@ -55,10 +45,4 @@ function snake_case(str) {
 // U => (_)
 // Y => 7
 
-// console.log(leet("a"));
-// console.log(leet("Test"));
-// console.log(leet("  test"));
-// console.log(leet("test Test tst"));
-// console.log(leet(""));
-// console.log(leet(null));
-// console.log(leet({}));
+console.log(leet("test Test tst"));
