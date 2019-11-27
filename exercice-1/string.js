@@ -33,15 +33,7 @@ function snake_case(str) {
 //leet
 function leet(str) {
     if(typeof str !== "string" || !str ) return '';
-    const mapper = {
-        A: 4,
-        E: 3,
-        I: 1,
-        O: 0,
-        U: (_),
-        Y: 7
-    }
-    return str;
+    return str.replace(/[aA]/g,"4").replace(/[eE]/g,"3").replace(/[iI]/g,"1").replace(/[oO]/g,"0").replace(/[uU]/g,"U").replace(/[yY]/g,"7");
 }
 
 
@@ -52,4 +44,4 @@ function leet(str) {
 // U => (_)
 // Y => 7
 
-//console.log(leet("test Test tst"));
+console.log(leet("anaconda"));
