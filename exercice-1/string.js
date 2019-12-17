@@ -28,7 +28,7 @@ function snake_case(str) {
     if (typeof str !== "string" || !str) {
         return "";
     }
-    return str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+    return str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '_');
 }
 
 //leet
