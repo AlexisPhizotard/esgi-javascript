@@ -24,10 +24,6 @@ function camelCase(str) {
 }
 
 //snake_case
-// function snake_case(str) {
-//     if(typeof str !== "string" || !str ) return '';
-//     return strtoLowerCase().replace(/[^a-zA-Z0-9]/g, '_');
-// }
 function snakecase(str) {
     if (typeof str !== "string" || !str) {
         return "";
