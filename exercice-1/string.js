@@ -24,7 +24,7 @@ function camelCase(str) {
 }
 
 //snake_case
-function snakecase(str) {
+function snake_case(str) {
     if (typeof str !== "string" || !str) {
         return "";
     }
