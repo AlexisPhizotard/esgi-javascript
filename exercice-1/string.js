@@ -69,3 +69,30 @@ function yoda(str) {
 }
 
 console.log(yoda("hello world"));
+
+
+function vig(str, code) {
+    if(typeof str !== "string" || !str) return '';
+
+    while(code.length < str.length) {
+        code += code;
+    }
+     let codeIndex = 0;
+    return str.split('').map(function(char) {
+        // Position dans l'alphabet du char du message
+        const charCode = char.charCodeAt(0) - "a".charCodeAt(0); 
+        // Verifie char is alpha
+        if(charCode < 0 || charCode > 25) return char;  // gere caractere special 
+        // Position dans l'alphabet du char du code 
+        const codeCode = code[codeIndex++].charCodeAt(0) - "a".charCodeAt(0);
+        // On applique vigenere
+        const cryptedCode = (charCode + codeCode) % 26;
+        // On position du char codé dans la table ASCII 
+        const cryptedChar =cryptedCode + "a".charCodeAt(0);
+        // On récup le code
+        return String.fromCharCode(cryptedChar);
+    }).join('');
+
+}
+
+console.log(vig("Hello-world", "foo"));
